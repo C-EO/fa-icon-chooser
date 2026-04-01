@@ -5,9 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { IconChooserResult, IconDefinition, IconUpload, UrlTextFetcher } from "./utils/utils";
+import { FamilyStyle, IconChooserResult, IconDefinition, IconUpload, UrlTextFetcher } from "./utils/utils";
 import { QueryHandler } from "./components/fa-icon-chooser/fa-icon-chooser";
-export { IconChooserResult, IconDefinition, IconUpload, UrlTextFetcher } from "./utils/utils";
+export { FamilyStyle, IconChooserResult, IconDefinition, IconUpload, UrlTextFetcher } from "./utils/utils";
 export { QueryHandler } from "./components/fa-icon-chooser/fa-icon-chooser";
 export namespace Components {
     /**
@@ -45,6 +45,13 @@ export namespace Components {
           * Required callback function which is responsible for taking a given GraphQL query document and returns a Promise that resolves to a JavaScript object corresponding to the body of the associated network request, same as what would be produced by [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Response/json).  The query document is compliant with the GraphQL API at [api.fontawesome.com](https://fontawesome.com/v5.15/how-to-use/graphql-api/intro/getting-started).  The implementation is responsible for handling any authorization that may be necessary to fulfill the request. For example, any time a kit is used to drive the Icon Chooser, it will be necessary to authorize GraphQL API requests sent to api.fontawesome.com with the [`kits_read` scope](https://fontawesome.com/v5.15/how-to-use/graphql-api/auth/scopes).
          */
         "handleQuery": QueryHandler;
+        /**
+          * Callback function that allows filtering of familyStyles prior to their use in the Icon Chooser.  This allows for further restricting which familyStyles are available to the end user, beyond the filtering that may already be applied according to business logic or a kit's subset.
+          * @param familyStyle
+          * @returns boolean - return true to include the familyStyle, false to exclude it.
+          * @default _familyStyle => true
+         */
+        "includeFamilyStyle": (familyStyle: FamilyStyle) => boolean;
         /**
           * A kit token identifying a kit in which to find icons. Takes precedent over version prop if both are present.
          */
@@ -132,6 +139,13 @@ declare namespace LocalJSX {
           * Required callback function which is responsible for taking a given GraphQL query document and returns a Promise that resolves to a JavaScript object corresponding to the body of the associated network request, same as what would be produced by [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Response/json).  The query document is compliant with the GraphQL API at [api.fontawesome.com](https://fontawesome.com/v5.15/how-to-use/graphql-api/intro/getting-started).  The implementation is responsible for handling any authorization that may be necessary to fulfill the request. For example, any time a kit is used to drive the Icon Chooser, it will be necessary to authorize GraphQL API requests sent to api.fontawesome.com with the [`kits_read` scope](https://fontawesome.com/v5.15/how-to-use/graphql-api/auth/scopes).
          */
         "handleQuery"?: QueryHandler;
+        /**
+          * Callback function that allows filtering of familyStyles prior to their use in the Icon Chooser.  This allows for further restricting which familyStyles are available to the end user, beyond the filtering that may already be applied according to business logic or a kit's subset.
+          * @param familyStyle
+          * @returns boolean - return true to include the familyStyle, false to exclude it.
+          * @default _familyStyle => true
+         */
+        "includeFamilyStyle"?: (familyStyle: FamilyStyle) => boolean;
         /**
           * A kit token identifying a kit in which to find icons. Takes precedent over version prop if both are present.
          */
