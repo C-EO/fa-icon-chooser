@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ---
 
+## [0.10.0](https://github.com/FortAwesome/fa-icon-chooser/releases/tag/0.10.0) - 2026-04-01
+
+### Changed
+
+- added an includeFamilyStyle filter, which can be used to further restrict the familyStyles presented in the Icon Chooser
+- adds family and style as properties to the IconChooserResult
+
 ## [0.9.1](https://github.com/FortAwesome/fa-icon-chooser/releases/tag/0.9.1) - 2025-07-22
 
 ### Changed
