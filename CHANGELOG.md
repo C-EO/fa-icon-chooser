@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
+## [0.10.2](https://github.com/FortAwesome/fa-icon-chooser/releases/tag/0.10.2) - 2026-05-05
+
+### Changed
+
+- Update lodash to address security vulnerabilities (though no vulnerable lodash functions were actually used by this app's production bundle)
+- Change lodash imports to be more specific to ensure that the production bundle includes only the lodash functions that are actually used by this app.
+
 ## [0.10.1](https://github.com/FortAwesome/fa-icon-chooser/releases/tag/0.10.1) - 2026-05-05
 
 ### Changed
