@@ -1,5 +1,10 @@
 import { Component, Element, Event, EventEmitter, h, Prop, State } from '@stencil/core';
-import { capitalize, debounce, find, get, set, size } from 'lodash';
+import capitalize from 'lodash/capitalize';
+import debounce from 'lodash/debounce';
+import find from 'lodash/find';
+import get from 'lodash/get';
+import set from 'lodash/set';
+import size from 'lodash/size';
 import {
   buildDefaultIconsSearchResult,
   buildIconChooserResult,

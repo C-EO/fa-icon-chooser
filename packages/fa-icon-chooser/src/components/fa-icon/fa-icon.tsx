@@ -1,7 +1,7 @@
 import { Component, h, Host, Prop, State } from '@stencil/core';
 import { CONSOLE_MESSAGE_PREFIX, IconUpload, parseSvgText, UrlTextFetcher } from '../../utils/utils';
 import { IconDefinition } from '../../utils/utils';
-import { get } from 'lodash';
+import get from 'lodash/get';
 
 /**
  * This fa-icon component isn't THE fa-icon component. It's just a convenience

@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { FaIconChooser } from './fa-icon-chooser';
 import { buildDefaultIconsSearchResult } from '../../utils/utils';
-import { get } from 'lodash';
+import get from 'lodash/get';
 import foodSearchResults from './food-search-results.fixture.json';
 
 // TODO: tests

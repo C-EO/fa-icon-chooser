@@ -1,6 +1,8 @@
 import defaultIconsSearchResultTemplate from './defaultIconsSearchResult.json';
 import { valid as validSemver } from 'semver';
-import { cloneDeep, get, set } from 'lodash';
+import cloneDeep from 'lodash/cloneDeep';
+import get from 'lodash/get';
+import set from 'lodash/set';
 
 const FREE_CDN_URL = 'https://use.fontawesome.com';
 const PRO_KIT_ASSET_URL = 'https://ka-p.fontawesome.com';
