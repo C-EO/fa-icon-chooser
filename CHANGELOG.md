@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
+## [0.10.1](https://github.com/FortAwesome/fa-icon-chooser/releases/tag/0.10.1) - 2026-05-05
+
+### Changed
+
+- fix includeFamilyStyle filter feature to reconcile the currently selected familyStyle with available familyStyles, after applying all filters.
 
 ## [0.10.0](https://github.com/FortAwesome/fa-icon-chooser/releases/tag/0.10.0) - 2026-04-01
 
