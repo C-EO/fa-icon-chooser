@@ -16,11 +16,9 @@ jobs:
       NPM_TAG: ${{ github.event.release.prerelease && 'pre' || 'latest' }}
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
-          node-version: "22"
-      - name: Update npm
-        run: npm install -g npm@latest
+          node-version: "24"
       - name: Prepare Main
         run: |
           cd packages/fa-icon-chooser
